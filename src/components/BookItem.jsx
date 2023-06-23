@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const BookItem = () => {
-  return (
-    <div>BookItem</div>
-  )
-}
+const BookItem = () => (
+  <div>BookItem</div>
+);
 
-export default BookItem
+export default BookItem;

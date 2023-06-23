@@ -4,14 +4,14 @@ import { Books, Categories } from './Pages';
 import { Layout } from './components';
 
 const App = () => (
-  
+
   <Routes>
-    <Route path='/' element={<Layout />}>
+    <Route path="/" element={<Layout />}>
       <Route index element={<Books />} />
-      <Route path='Categories' element={ <Categories /> } />
+      <Route path="Categories" element={<Categories />} />
     </Route>
   </Routes>
-  
-)
 
-export default App
+);
+
+export default App;
