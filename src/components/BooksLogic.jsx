@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import BookList from './BookList';
 
 const BooksLogic = () => {
   
@@ -24,7 +25,11 @@ const BooksLogic = () => {
     ]
   );
 
-  <div>BooksLogic</div>
+  return (
+    <div>
+      <BookList booksProps={ books } />      
+    </div>   
+ )
 };
 
 export default BooksLogic;
