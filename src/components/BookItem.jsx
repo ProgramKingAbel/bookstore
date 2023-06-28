@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { added, removed } from '../redux/features/books/booksSlice';
 
-const BookItem = ({ itemProp }) => (
+const BookItem = () => {
+
+  return (
   <li>
     <div>
 
@@ -27,8 +31,9 @@ const BookItem = ({ itemProp }) => (
       <button type="button">Update Progress</button>
     </div>
 
-  </li>
-);
+    </li>
+  )
+};
 
 BookItem.propTypes = {
   itemProp: PropTypes.shape({
