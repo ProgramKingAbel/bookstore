@@ -6,6 +6,14 @@ import App from './App';
 import store from './redux/store';
 import axios from 'axios';
 
+const DisplayError = () => {
+  return (
+    <div>
+      <p>Error Creating App. Please try to refresh the page</p>
+    </div>
+  )
+}
+
 const appId = localStorage.getItem('appId');
 if (!appId) {
   axios.post(`${process.env.REACT_APP_MY_BOOKSTORE_URL}`)
