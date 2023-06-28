@@ -1,10 +1,10 @@
 import React from 'react';
-import { BookList } from '../components';
+import { BookList, Form } from '../components';
 
 const Books = () => (
   <div>
     <BookList />
-    {/* <Form /> */}
+    <Form />
   </div>
 );
 
