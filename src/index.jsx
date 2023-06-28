@@ -22,6 +22,7 @@ const Index = () => {
         .then((response) => {
           localStorage.setItem('appId', response.data);
         }).catch((error) => {
+          // eslint-disable-next-line
           console.error('Error creating app', error);
           setError(true);
         });
