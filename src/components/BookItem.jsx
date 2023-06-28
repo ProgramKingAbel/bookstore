@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { removed } from '../redux/features/books/booksSlice';
 
 const BookItem = ({ id }) => {
   const book = useSelector((state) => state.book.books[id]);
