@@ -1,10 +1,10 @@
 import React from 'react';
-import { BooksLogic, Form } from '../components';
+import { BookList } from '../components';
 
 const Books = () => (
   <div>
-    <BooksLogic />
-    <Form />
+    <BookList />
+    {/* <Form /> */}
   </div>
 );
 
