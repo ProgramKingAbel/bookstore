@@ -7,12 +7,19 @@ const Form = () => {
   const dispatch = useDispatch();
   const [bookValue, setBookValue] = useState('');
   const [author, setAuthor] = useState('');
-  const newBook = { item_id: uuidv4(), title: bookValue, author };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newBook = { item_id: uuidv4(), title: bookValue, author };
+    dispatch(added(newBook));
+    setBookValue('');
+    setAuthor('');
+  };
 
   return (
     <div>
       <h2>Add book</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Book Title"
@@ -25,7 +32,7 @@ const Form = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <button type="button" onClick={() => { dispatch(added(newBook)); }}>ADD BOOK</button>
+        <button type="submit">ADD BOOK</button>
       </form>
     </div>
   );
