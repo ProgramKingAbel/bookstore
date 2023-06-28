@@ -1,9 +1,9 @@
 import React from 'react';
-import { BooksLogic, Form } from '../components';
+import { BookList, Form } from '../components';
 
 const Books = () => (
   <div>
-    <BooksLogic />
+    <BookList />
     <Form />
   </div>
 );

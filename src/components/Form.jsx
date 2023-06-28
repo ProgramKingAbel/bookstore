@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { added } from '../redux/features/books/booksSlice';
 
 const Form = () => {
-  const authors = ['Author 1', 'Author 2', 'Author 3', 'Author 4', 'Author 5'];
+  const dispatch = useDispatch();
+  const [bookValue, setBookValue] = useState('');
+  const [author, setAuthor] = useState('');
 
-  const authorOptions = authors.map((author) => (
-    <option value={author} key={uuidv4()}>{ author }</option>
-  ));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newBook = { item_id: uuidv4(), title: bookValue, author };
+    dispatch(added(newBook));
+    setBookValue('');
+    setAuthor('');
+  };
 
   return (
     <div>
       <h2>Add book</h2>
-      <form>
-        <input type="text" placeholder="Book Title" />
-        <select>
-          <option value="" disabled>
-            Select Author ▼
-          </option>
-          {authorOptions}
-        </select>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Book Title"
+          value={bookValue}
+          onChange={(e) => setBookValue(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Author Name"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />
         <button type="submit">ADD BOOK</button>
       </form>
     </div>
