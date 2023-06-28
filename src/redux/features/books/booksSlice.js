@@ -10,3 +10,5 @@ const bookSlice = createSlice({
         removed: (state, action) => state.books = action.payload,
     }
 })
+
+export default bookSlice.reducer;
