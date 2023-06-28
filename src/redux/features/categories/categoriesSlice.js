@@ -8,4 +8,6 @@ const categoriesSlice = createSlice({
     reducers: {
         status: state => "Under Construction",
     }
-})
+});
+
+export default categoriesSlice.reducer;
