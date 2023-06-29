@@ -2,16 +2,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const APP_ID = localStorage.getItem('appId');
+const BASE_URL = `${process.env.REACT_APP_MY_BOOKSTORE_URL}${APP_ID}/books`;
 
 const initialState = {
-  users: [],
+  books: [],
   error: '',
 };
 
-export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
-  return axios.get()
-});
-
+export const fetchBooks = createAsyncThunk('book/fetchBooks', () => axios.get(BASE_URL).then((response) => response.data));
 
 const bookSlice = createSlice({
   name: 'book',
