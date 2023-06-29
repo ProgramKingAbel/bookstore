@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks, deleteBook } from '../redux/features/books/booksSlice';
+import '../styles/BookList.css';
 
 const BookList = () => {
   const dispatch = useDispatch();
