@@ -17,7 +17,7 @@ export const deleteBook = createAsyncThunk('book/deleteBook', async (itemId, { d
 });
 
 export const addBook = createAsyncThunk('book/addBook', async (book, { dispatch }) => {
-  await axios.post(BASE_URL);
+  await axios.post(BASE_URL, book);
   const response = await dispatch(fetchBooks());
   return response.payload;
 });
