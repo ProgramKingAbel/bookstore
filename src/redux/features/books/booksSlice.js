@@ -25,6 +25,10 @@ const bookSlice = createSlice({
       state.books = action.payload;
       state.error = '';
     });
+    builder.addCase(fetchBooks.rejected, (state, action) => {
+      state.books = [];
+      state.error = action.error.message;
+    });
   },
 });
 
