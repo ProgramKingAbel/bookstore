@@ -5,18 +5,19 @@ import BookItem from './BookItem';
 
 const BookList = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.book);
+  const book = useSelector((state) => state.book);
 
   useEffect(() => {
     dispatch(fetchBooks())
   }, [])
 
   return (
-    <ul>
-      {books.map((book, i) => (
-        <BookItem key={book.item_id} id={i} />
-      ))}
-    </ul>
+    <>     
+      <ul>
+        
+      </ul>
+    
+    </>
   );
 };
 
