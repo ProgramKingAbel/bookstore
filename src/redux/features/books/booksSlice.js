@@ -10,6 +10,7 @@ const initialState = {
 };
 
 export const fetchBooks = createAsyncThunk('book/fetchBooks', () => axios.get(BASE_URL).then((response) => response.data));
+
 export const deleteBook = createAsyncThunk('book/deleteBook', async (itemId, { dispatch }) => {
   await axios.delete(`${BASE_URL}/${itemId}`);
   const response = await dispatch(fetchBooks());
@@ -46,4 +47,3 @@ const bookSlice = createSlice({
 });
 
 export default bookSlice.reducer;
-export const { added, removed } = bookSlice.actions;
