@@ -10,6 +10,7 @@ const initialState = {
 };
 
 export const fetchBooks = createAsyncThunk('book/fetchBooks', () => axios.get(BASE_URL).then((response) => response.data));
+export const deleteBook = createAsyncThunk('book/deleteBook', (item_id) => axios.delete(`${BASE_URL}/${item_id}`).then((response) => response.data));
 
 const bookSlice = createSlice({
   name: 'book',
