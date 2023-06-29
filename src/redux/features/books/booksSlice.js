@@ -20,6 +20,12 @@ const bookSlice = createSlice({
       state.books = state.books.filter((book) => book.item_id !== action.payload);
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(fetchBooks.fulfilled, (state, action) => {
+      state.books = action.payload;
+      state.error = '';
+    });
+  },
 });
 
 export default bookSlice.reducer;
