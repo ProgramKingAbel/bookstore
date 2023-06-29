@@ -5,7 +5,7 @@ const APP_ID = localStorage.getItem('appId');
 const BASE_URL = `${process.env.REACT_APP_MY_BOOKSTORE_URL}${APP_ID}/books`;
 
 const initialState = {
-  books: [],
+  books: {},
   error: '',
 };
 
@@ -26,7 +26,7 @@ const bookSlice = createSlice({
       state.error = '';
     });
     builder.addCase(fetchBooks.rejected, (state, action) => {
-      state.books = [];
+      state.books = {};
       state.error = action.error.message;
     });
   },
