@@ -38,6 +38,10 @@ const bookSlice = createSlice({
       state.books = action.payload;
       state.error = '';
     });
+    builder.addCase(addBook.fulfilled, (state, action) => {
+      state.books = action.payload;
+      state.error = '';
+    });
   },
 });
 
