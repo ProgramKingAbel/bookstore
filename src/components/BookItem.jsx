@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { removed } from '../redux/features/books/booksSlice';
 
-const BookItem = ({ id }) => {
-  const book = useSelector((state) => state.book.books[id]);
+const BookItem = ({ id, book }) => {
   const dispatch = useDispatch();
 
   return (
@@ -19,7 +18,7 @@ const BookItem = ({ id }) => {
 
         <div>
           <button type="button">Comments</button>
-          <button type="button" onClick={() => { dispatch(removed(book.item_id)); }}>Remove</button>
+          <button type="button" onClick={() => { dispatch(removed(id)); }}>Remove</button>
           <button type="button">Edit</button>
         </div>
 
@@ -38,7 +37,3 @@ const BookItem = ({ id }) => {
 };
 
 export default BookItem;
-
-BookItem.propTypes = {
-  id: PropTypes.number.isRequired,
-};
