@@ -16,6 +16,12 @@ export const deleteBook = createAsyncThunk('book/deleteBook', async (itemId, { d
   return response.payload;
 });
 
+export const addBook = createAsyncThunk('book/addBook', async (book, { dispatch }) => {
+  await axios.post(BASE_URL);
+  const response = await dispatch(fetchBooks());
+  return response.payload;
+});
+
 const bookSlice = createSlice({
   name: 'book',
   initialState,
