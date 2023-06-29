@@ -3,7 +3,7 @@ import { BookList, Form } from '../components';
 import '../styles/BookPage.css';
 
 const Books = () => (
-  <div>
+  <div className="page-books">
     <BookList />
     <Form />
   </div>
