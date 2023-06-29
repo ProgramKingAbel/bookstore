@@ -37,3 +37,12 @@ const BookItem = ({ id, book }) => {
 };
 
 export default BookItem;
+
+BookItem.propTypes = {
+  book: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
+  id: PropTypes.string.isRequired,
+};
