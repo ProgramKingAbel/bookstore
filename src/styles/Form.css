@@ -1,46 +1,46 @@
 .form-wrapper {
-    width: 85%;
-    margin: 0 auto;
-    padding: 2.3rem 0;
-    border-bottom: 1px solid #e8e8e8;
-    
+  width: 85%;
+  margin: 0 auto;
+  padding: 2.3rem 0;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 form {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-wrapper h2 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 0 1.188rem;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #888;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 1.188rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
 }
 
 .submit {
-    font-family: 'Roboto Slab', sans-serif;
-    background: #0290ff;
-    font-size: 0.875rem;
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    padding: 1rem 2rem 0.886rem 1.375rem;
-    border-radius: 3px;
+  font-family: 'Roboto Slab', sans-serif;
+  background: #0290ff;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem 0.886rem 1.375rem;
+  border-radius: 3px;
 }
 
-input, select {
+input,
+select {
   padding: 1rem 5rem 1rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  background-color: #fff
+  background-color: #fff;
 }
 
-::placeholder, .c-select {
+::placeholder,
+.c-select {
   font-family: 'Roboto Slab', serif;
   font-size: 1rem;
   font-weight: normal;
   color: #c4c4c4;
 }
-

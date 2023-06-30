@@ -1,32 +1,32 @@
 nav {
-    display: flex;
-    padding: 1.438rem 6.188rem 1.688rem 6.25rem;
-    gap: 2.6rem;
-    align-items: center;
-    border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  gap: 2.6rem;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.6rem;
 }
 
 nav a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.813rem;
-    color: #121212;
-    opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  opacity: 0.5;
 }
 
 .active {
-    opacity: 1;
+  opacity: 1;
 }
 
 nav h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.875rem;
-    font-weight: bold;
-    color: #0290ff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
 }
