@@ -25,7 +25,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -63,15 +62,6 @@
 - **[USED REDUCERS AND ACTIONS]**
 - **[USED REDUX IN REACT COMPONENTS]**
 - **[USED CONNECTION TO API]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> - [Live Demo Link - Yet to be released]
-> - [Introduction to Project -Yet to be released]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
