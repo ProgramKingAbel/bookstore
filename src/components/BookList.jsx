@@ -9,7 +9,6 @@ const BookList = () => {
   const books = useSelector((state) => state.book.books);
 
   const randomPercentage = () => Math.floor(Math.random() * 101);
-  // const randomChapter = () => Math.floor(Math.random() * 31);
 
   useEffect(() => {
     dispatch(fetchBooks());
