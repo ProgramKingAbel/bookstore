@@ -9,6 +9,7 @@ const BookList = () => {
   const books = useSelector((state) => state.book.books);
 
   const randomPercentage = () => Math.floor(Math.random() * 101);
+  // const randomChapter = () => Math.floor(Math.random() * 31);
 
   useEffect(() => {
     dispatch(fetchBooks());
@@ -41,7 +42,9 @@ const BookList = () => {
 
             <div>
               <h3 className="chapter">Current Chapter</h3>
-              <h4 className="lesson">Chapter 8</h4>
+              <h4 className="lesson">
+                Chapter 1
+              </h4>
               <button className="update-progress" type="button">UPDATE PROGRESS</button>
             </div>
 

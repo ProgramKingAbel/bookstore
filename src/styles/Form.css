@@ -1,0 +1,35 @@
+.form-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    padding: 2.3rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    
+}
+
+.form-wrapper h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 0 1.188rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #888;
+}
+
+.submit {
+    font-family: 'Roboto Slab', sans-serif;
+    background: #0290ff;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    margin: 0.75rem 0 0.563rem 3.688rem;
+    padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+    border-radius: 3px;
+}
+
+input {
+ margin: 1.188rem 2.125rem 0 0;
+  padding: 1rem 2rem 1rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff
+}

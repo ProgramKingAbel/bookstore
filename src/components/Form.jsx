@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/features/books/booksSlice';
+import '../styles/Form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -19,10 +20,11 @@ const Form = () => {
   };
 
   return (
-    <div>
-      <h2>Add book</h2>
+    <div className="form-wrapper">
+      <h2>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
         <input
+          className="input-title"
           type="text"
           placeholder="Book Title"
           value={bookValue}
@@ -34,7 +36,7 @@ const Form = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <button type="submit">ADD BOOK</button>
+        <button className="submit" type="submit">ADD BOOK</button>
       </form>
     </div>
   );
