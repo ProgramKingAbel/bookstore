@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import '../styles/Progressbar.css';
 
 const ProgressBar = ({ percentage }) => {
   const [progress, setProgress] = useState(0);
@@ -10,16 +13,12 @@ const ProgressBar = ({ percentage }) => {
 
   return (
     <div className="progress-bar">
-      <div
-        style={{
-          transform: `rotate(${(360 * progress) / 100}deg)`,
-          background: 'linear-gradient(to right, dodgerblue, lightblue)',
-          boxShadow: '0 0 5px rgba(0, 0, 0, 0.3)',
-        }}
-      />
-      <div className="percentage">
-        {progress}
-        %
+      <div className="circle">
+        <CircularProgressbar value={progress} />
+      </div>
+      <div>
+        <div className="percentage">{`${progress}%`}</div>
+        <span className="completed">Completed</span>
       </div>
     </div>
   );
