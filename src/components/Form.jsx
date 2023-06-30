@@ -8,15 +8,17 @@ const Form = () => {
   const dispatch = useDispatch();
   const [bookValue, setBookValue] = useState('');
   const [author, setAuthor] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = {
-      item_id: uuidv4(), title: bookValue, author, category: 'Fiction',
+      item_id: uuidv4(), title: bookValue, author, category: selectedCategory,
     };
     dispatch(addBook(newBook));
     setBookValue('');
     setAuthor('');
+    setSelectedCategory('');
   };
 
   return (
@@ -26,16 +28,23 @@ const Form = () => {
         <input
           className="input-title"
           type="text"
-          placeholder="Book Title"
+          placeholder="Book title"
           value={bookValue}
           onChange={(e) => setBookValue(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Author Name"
+          placeholder="Author name"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
+        <select className="c-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+          <option value="">Category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Nature">Nature</option>
+          <option value="Action">Action</option>
+          <option value="Nutrition">Nutrition</option>
+        </select>
         <button className="submit" type="submit">ADD BOOK</button>
       </form>
     </div>
