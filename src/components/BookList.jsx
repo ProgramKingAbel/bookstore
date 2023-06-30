@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBooks, deleteBook } from '../redux/features/books/booksSlice';
+import ProgressBar from './ProgressBar';
 import '../styles/BookList.css';
 
 const BookList = () => {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.book.books);
+
+  const randomPercentage = () => Math.floor(Math.random() * 101);
 
   useEffect(() => {
     dispatch(fetchBooks());
@@ -34,7 +37,7 @@ const BookList = () => {
 
             </div>
 
-            <div>60%</div>
+            <div><ProgressBar percentage={randomPercentage} /></div>
 
             <div>
               <h3 className="chapter">Current Chapter</h3>
