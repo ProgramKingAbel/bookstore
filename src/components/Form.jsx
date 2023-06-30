@@ -27,6 +27,7 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <input
           className="input-title"
+          required
           type="text"
           placeholder="Book title"
           value={bookValue}
@@ -35,10 +36,11 @@ const Form = () => {
         <input
           type="text"
           placeholder="Author name"
+          required
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <select className="c-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
+        <select required className="c-select" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
           <option value="">Category</option>
           <option value="Fiction">Fiction</option>
           <option value="Nature">Nature</option>

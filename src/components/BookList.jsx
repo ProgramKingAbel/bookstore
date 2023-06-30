@@ -20,9 +20,9 @@ const BookList = () => {
       {Object.keys(books).map((key) => (
         books[key].map((book) => (
           <li key={key} className="card">
-            <div>
+            <div className="details">
 
-              <div>
+              <div className="book-details">
                 <h2 className="category">{book.category}</h2>
                 <h1 className="title">{book.title}</h1>
                 <h3 className="author">{book.author}</h3>
@@ -39,6 +39,7 @@ const BookList = () => {
             </div>
 
             <div><ProgressBar percentage={randomPercentage} /></div>
+            <hr className="partition" />
 
             <div>
               <h3 className="chapter">Current Chapter</h3>
