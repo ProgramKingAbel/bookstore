@@ -1,0 +1,27 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.313rem;
+}
+
+.circle {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.percentage {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #121212;
+}
+
+.completed {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #121212;
+}
