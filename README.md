@@ -57,10 +57,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[USED REACT LIBRARY]**
-- **[USED REACT COMPONENTS]**
-- **[USED REDUCERS AND ACTIONS]**
-- **[USED REDUX IN REACT COMPONENTS]**
+- **[REACT LIBRARY]**
+- **[REACT COMPONENTS]**
+- **[REDUCERS AND ACTIONS]**
+- **[REDUX IN REACT COMPONENTS]**
 - **[USED CONNECTION TO API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -92,7 +92,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-- You can deploy this projec on hosting provider of your choise or you can deploy it on github pages.
+- You can deploy this project on hosting provider of your choise or you can deploy it on github pages.
 
 ### Usage
 
